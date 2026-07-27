@@ -23,7 +23,7 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-articles_html = ""
+articles_list = []
 today_date = datetime.now().strftime("%Y-%m-%d %H:%M")
 
 print("downloading data")
@@ -49,7 +49,7 @@ for feed_url in rss_feeds:
                 else:
                     short_summary = clean_summary
                 
-                articles_html += f"""
+                card_html = f"""
                 <article class="card">
                     <span class="tag">{source_name}</span>
                     <h3>{title}</h3>
@@ -57,16 +57,36 @@ for feed_url in rss_feeds:
                     <a href="{link}" target="_blank" class="read-more">Read more &rarr;</a>
                 </article>
                 """
+                articles_list.append(card_html)
                 print(f"[OK] {source_name}")
     except Exception:
         pass
+
+# Kafelek z naszą krówką w różowych okularach
+cow_card_html = """
+<article class="card cow-special-card">
+    <span class="tag" style="background-color: #db2777;">Cyber Maskotka</span>
+    <img src="cow_sidebar.jpg" alt="Ethical Hacking Cow" style="width: 100%; border-radius: 6px; margin: 10px 0;">
+    <h3>Cyber Cow Security</h3>
+    <p class="summary-text">Etyczna hakerka w różowych okularach czuwa nad bezpieczeństwem i analizuje zagrożenia.</p>
+    <a href="#" class="read-more" style="color: #f472b6;">Secure the future &rarr;</a>
+</article>
+"""
+
+# Wstawiamy krówkę dokładnie na 3. pozycję (indeks 2), czyli w prawy górny róg!
+if len(articles_list) >= 2:
+    articles_list.insert(2, cow_card_html)
+else:
+    articles_list.append(cow_card_html)
+
+articles_html = "".join(articles_list)
 
 full_html_page = f"""
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%%3E<circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ec4899%22/%3E</svg>">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSINT & Cyber Threat Dashboard</title>
     <style>
@@ -112,6 +132,10 @@ full_html_page = f"""
         .card:hover {{
             transform: translateY(-3px);
             border-color: #38bdf8;
+        }}
+        .cow-special-card {{
+            border-color: #f472b6 !important;
+            background: linear-gradient(135deg, #1e293b 0%, #3b0764 100%);
         }}
         .tag {{
             background-color: #0284c7;
