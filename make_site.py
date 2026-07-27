@@ -6,6 +6,7 @@ from datetime import datetime
 
 rss_feeds = [
     "https://www.bellingcat.com/feed/",
+    "https://www.forensicfocus.com/feed/",
     "https://inteltechniques.com/blog/feed/",
     "https://citizenlab.ca/feed/",
     "https://feeds.feedburner.com/TheHackersNews",
