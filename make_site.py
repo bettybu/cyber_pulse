@@ -14,11 +14,12 @@ rss_feeds = [
     "https://www.darkreading.com/rss.xml",
     "https://www.securityweek.com/feed/",
     "https://www.cyberscoop.com/feed/",
-    "https://niebezpiecznik.pl/feed/",  
-    "https://www.bleepingcomputer.com/feed/",
+     "https://www.bleepingcomputer.com/feed/",
     "https://zaufanatrzeciastrona.pl/feed/",
     "https://cert.pl/feed/",
-    "https://sekurak.pl/feed/"
+    "https://sekurak.pl/feed/",
+    "https://niebezpiecznik.pl/feed/"
+   
 ]
 
 headers = {
@@ -67,10 +68,10 @@ for feed_url in rss_feeds:
 cow_card_html = """
 <article class="card cow-special-card">
     <span class="tag" style="background-color: #db2777;">Cyber Mascot</span>
-    <img src="cow_sidebar.jpg" alt="highland cow as aan ethical hacker image" style="width: 100%; border-radius: 6px; margin: 10px 0;">
-    <h3></h3>
-    <p class="summary-text">Daily cybersecurity news overview, updated every morning</p>
-    <a href="#" class="read-more" style="color: #f472b6;">Read more &rarr;</a>
+    <img src="cow_sidebar.jpg" alt="Ethical Hacking Cow" style="width: 100%; border-radius: 6px; margin: 10px 0;">
+    <h3>Cyber Cow Security</h3>
+    <p class="summary-text">Stay curious. Monitoring threat intelligence and tracking the latest vulnerabilities to secure the digital frontier.</p>
+    <a href="https://www.tenable.com/cve/newest" target="_blank" class="read-more" style="color: #f472b6;">Newest CVE &rarr;</a>
 </article>
 """
 
@@ -176,7 +177,7 @@ full_html_page = f"""
     <div class="container">
         <header>
             <h1>🛡️ OSINT & Cyber Daily Feed</h1>
-            <div class="subtitle">Daily cybersecurity news overview, updated every morning | Last update: {today_date}</div>
+            <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM | Last update: {today_date}</div>
         </header>
         
         <div class="grid">
