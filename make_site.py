@@ -70,8 +70,8 @@ cow_card_html = """
     <span class="tag" style="background-color: #db2777;">Newest CVEs</span>
     <img src="cow_sidebar.jpg" alt="Ethical Hacking Cow" style="width: 100%; border-radius: 6px; margin: 10px 0;">
     <h3>Cyber Cow Security</h3>
-    <p class="summary-text">Stay curious. Monitoring threat intelligence and tracking the latest vulnerabilities to secure the digital frontier.</p>
-    <a href="https://www.tenable.com/cve/newest" target="_blank" class="read-more" style="color: #f472b6;">Newest CVE &rarr;</a>
+    <p class="summary-text">Monitoring threat intelligence and tracking the latest vulnerabilities to secure the digital frontier.</p>
+    <a href="https://www.tenable.com/cve/newest" target="_blank" class="read-more" style="color: #f472b6;">Newest CVEs &rarr;</a>
 </article>
 """
 
