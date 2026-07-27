@@ -14,6 +14,8 @@ rss_feeds = [
     "https://www.darkreading.com/rss.xml",
     "https://www.securityweek.com/feed/",
     "https://www.cyberscoop.com/feed/",
+    "https://niebezpiecznik.pl/feed/",  
+    "https://www.bleepingcomputer.com/feed/",
     "https://zaufanatrzeciastrona.pl/feed/",
     "https://cert.pl/feed/",
     "https://sekurak.pl/feed/"
