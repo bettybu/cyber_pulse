@@ -54,7 +54,7 @@ for feed_url in rss_feeds:
                     <span class="tag">{source_name}</span>
                     <h3>{title}</h3>
                     <p class="summary-text">{short_summary}</p>
-                    <a href="{link}" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                    <a href="{link}" target="_blank" class="read-more">Read more &rarr;</a>
                 </article>
                 """
                 print(f"[OK] {source_name}")
