@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT & Cyber Threat Dashboard</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 2px solid #334155;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #38bdf8;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #38bdf8;
+        }
+        .tag {
+            background-color: #0284c7;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0 0 10px 0;
+            color: #f1f5f9;
+        }
+        /* Nowy styl dla naszego streszczenia */
+        .summary-text {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin: 0 0 15px 0;
+            flex-grow: 1; /* Popycha link na sam dół karty */
+        }
+        .read-more {
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: auto;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ OSINT & Cyber Daily Feed</h1>
+            <div class="subtitle">Updated: 2026-07-27 16:04</div>
+        </header>
+        
+        <div class="grid">
+            
+                <article class="card">
+                    <span class="tag">bellingcat.com</span>
+                    <h3>Shahed-Type Drones Filmed During Mali Village Attacks</h3>
+                    <p class="summary-text">Bellingcat has geolocated footage showing Shahed-136 type kamikaze drones in operation in Mali. Defence Blog and France 24 previously published report...</p>
+                    <a href="https://www.bellingcat.com/news/2026/07/24/shahed-type-drones-filmed-during-attack-on-mali-villages/" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">inteltechniques.com</span>
+                    <h3>Online Training: Updates & Membership Discounts</h3>
+                    <p class="summary-text">Posted By: Jason Edison Periodically, we like to share some of the tactics, tools, and topics that we’ve been tackling recently in our online training...</p>
+                    <a href="https://inteltechniques.com/blog/2026/07/14/online-training-updates-membership-discounts/" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">citizenlab.ca</span>
+                    <h3>How Iran Uses Cellular Infrastructure to Target US Military Phones</h3>
+                    <p class="summary-text">Senior fellow Gary Miller spoke with Cape Cellular about the exploitation of mobile network vulnerabilities to track US personnel during the Iran war....</p>
+                    <a href="https://citizenlab.ca/how-iran-uses-cellular-infrastructure-to-target-us-military-phones/" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">feeds.feedburner.com</span>
+                    <h3>n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process</h3>
+                    <p class="summary-text">n8n has patched a high-severity expression-sandbox escape that could let an authenticated workflow editor execute operating-system commands on the ser...</p>
+                    <a href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">therecord.media</span>
+                    <h3>Hackers used autonomous AI agent to spy on Thailand's finance ministry</h3>
+                    <p class="summary-text">Hackers used an autonomous artificial intelligence agent to carry out a cyber-espionage campaign against Thailand's Ministry of Finance, researchers d...</p>
+                    <a href="https://therecord.media/thailand-hackers-ai-finance-ministry" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">krebsonsecurity.com</span>
+                    <h3>LG to Ban Residential Proxies from Smart TV Apps</h3>
+                    <p class="summary-text">The home appliance giant LG Electronics USA said this week it plans to suspend any apps built for its smart TVs that turn one's television into an alw...</p>
+                    <a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">darkreading.com</span>
+                    <h3>CISOs vs. Boards: Myth or Misunderstanding?</h3>
+                    <p class="summary-text">Escalating threats are forcing boards to prioritize security, but communication gaps persist. Boards and security teams each say they need more suppor...</p>
+                    <a href="https://www.darkreading.com/cybersecurity-operations/cisos-vs-boards-myth-or-misunderstanding-" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">securityweek.com</span>
+                    <h3>PTC Windchill Vulnerability Exploited in Ransomware Campaign</h3>
+                    <p class="summary-text">The critical unsafe deserialization flaw allows attackers to execute arbitrary code remotely, without authentication.
+The post PTC Windchill Vulnerabi...</p>
+                    <a href="https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+                <article class="card">
+                    <span class="tag">cyberscoop.com</span>
+                    <h3>Sen. Wyden urges feds to discard older, insecure, public-facing VPNs</h3>
+                    <p class="summary-text">In a letter first reported by CyberScoop, Ron Wyden, D-Ore., said ‘devastating’ attacks on the federal government have accumulated due to the tech.
+Th...</p>
+                    <a href="https://cyberscoop.com/wyden-calls-for-federal-legacy-vpn-purge-zero-trust/" target="_blank" class="read-more">Przeczytaj artykuł &rarr;</a>
+                </article>
+                
+        </div>
+    </div>
+</body>
+</html>

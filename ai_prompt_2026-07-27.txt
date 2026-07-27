@@ -1,0 +1,49 @@
+You are a professional OSINT analyst and cybersecurity expert. 
+Here are the latest industry news articles from today. 
+Based on them, write one engaging and accessible LinkedIn post. 
+Select the 3 most interesting pieces of information, create a catchy hook, and summarize them in bullet points. 
+At the bottom, add links to the selected articles.
+
+Here is the collected news data to analyze:
+Title: Shahed-Type Drones Filmed During Mali Village Attacks
+Summary: <p>Bellingcat has geolocated footage showing Shahed-136 type kamikaze drones in operation in Mali. Defence Blog and France 24 previously published reports that these drones were being deployed on the battlefield in northern Mali. But Bellingcat and Jeune Afrique subsequently verified two recent strikes using geolocation, satellite imagery and expert analysis to provide some of the [&#8230;]</p>
+<p>The post <a href="https://www.bellingcat.com/news/2026/07/24/shahed-type-drones-filmed-during-attack-on-mali-villages/" rel="nofollow">Shahed-Type Drones Filmed During Mali Village Attacks</a> appeared first on <a href="https://www.bellingcat.com" rel="nofollow">bellingcat</a>.</p>
+Link: https://www.bellingcat.com/news/2026/07/24/shahed-type-drones-filmed-during-attack-on-mali-villages/
+
+Title: Online Training: Updates & Membership Discounts
+Summary: Posted By: Jason Edison Periodically, we like to share some of the tactics, tools, and topics that we’ve been tackling recently in our online training program. If it has been a while since you last visited the training, the summary below will bring you up to speed on what has been added recently. We continue [&#8230;]
+Link: https://inteltechniques.com/blog/2026/07/14/online-training-updates-membership-discounts/
+
+Title: How Iran Uses Cellular Infrastructure to Target US Military Phones
+Summary: <p>Senior fellow Gary Miller spoke with Cape Cellular about the exploitation of mobile network vulnerabilities to track US personnel during the Iran war.</p>
+<p>The post <a href="https://citizenlab.ca/how-iran-uses-cellular-infrastructure-to-target-us-military-phones/">How Iran Uses Cellular Infrastructure to Target US Military Phones</a> appeared first on <a href="https://citizenlab.ca">The Citizen Lab</a>.</p>
+Link: https://citizenlab.ca/how-iran-uses-cellular-infrastructure-to-target-us-military-phones/
+
+Title: n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process
+Summary: n8n has patched a high-severity expression-sandbox escape that could let an authenticated workflow editor execute operating-system commands on the server running the automation platform. Security Joes found the flaw while probing n8n's February fix for CVE-2026-27577 for another bypass.
+
+The affected ranges are &lt;2.31.5 and &gt;=2.32.0,&lt;2.32.1. n8n fixed the flaw in versions 2.31.5 and
+Link: https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html
+
+Title: Hackers used autonomous AI agent to spy on Thailand's finance ministry
+Summary: Hackers used an autonomous artificial intelligence agent to carry out a cyber-espionage campaign against Thailand's Ministry of Finance, researchers discovered.
+Link: https://therecord.media/thailand-hackers-ai-finance-ministry
+
+Title: LG to Ban Residential Proxies from Smart TV Apps
+Summary: The home appliance giant LG Electronics USA said this week it plans to suspend any apps built for its smart TVs that turn one's television into an always-on residential proxy node. The move comes less than a month after researchers found that more than 42 percent of games and other apps available for download on LG's webOS store allow unknown third-parties to route their Internet traffic through a user's TV.
+Link: https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/
+
+Title: CISOs vs. Boards: Myth or Misunderstanding?
+Summary: Escalating threats are forcing boards to prioritize security, but communication gaps persist. Boards and security teams each say they need more support to bridge the divide.
+Link: https://www.darkreading.com/cybersecurity-operations/cisos-vs-boards-myth-or-misunderstanding-
+
+Title: PTC Windchill Vulnerability Exploited in Ransomware Campaign
+Summary: <p>The critical unsafe deserialization flaw allows attackers to execute arbitrary code remotely, without authentication.</p>
+<p>The post <a href="https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/">PTC Windchill Vulnerability Exploited in Ransomware Campaign</a> appeared first on <a href="https://www.securityweek.com">SecurityWeek</a>.</p>
+Link: https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/
+
+Title: Sen. Wyden urges feds to discard older, insecure, public-facing VPNs
+Summary: <p>In a letter first reported by CyberScoop, Ron Wyden, D-Ore., said ‘devastating’ attacks on the federal government have accumulated due to the tech.</p>
+<p>The post <a href="https://cyberscoop.com/wyden-calls-for-federal-legacy-vpn-purge-zero-trust/">Sen. Wyden urges feds to discard older, insecure, public-facing VPNs</a> appeared first on <a href="https://cyberscoop.com">CyberScoop</a>.</p>
+Link: https://cyberscoop.com/wyden-calls-for-federal-legacy-vpn-purge-zero-trust/
+
