@@ -2,9 +2,9 @@ name: Update OSINT News Daily
 
 on:
   schedule:
-    # Uruchamia się codziennie o 6:00 rano czasu UTC (co odpowiada 8:00 czasu polskiego)
+
     - cron: '0 6 * * *'
-  workflow_dispatch: # Pozwala też na uruchomienie bota ręcznie przyciskiem w GitHubie
+  workflow_dispatch: 
 
 permissions:
   contents: write
