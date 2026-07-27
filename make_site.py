@@ -3,7 +3,7 @@ import requests
 import re
 from datetime import datetime
 
-# --- 1. LISTA 10 STRON OSINT / CYBER ---
+
 rss_feeds = [
     "https://www.bellingcat.com/feed/",
     "https://inteltechniques.com/blog/feed/",
@@ -23,9 +23,8 @@ headers = {
 articles_html = ""
 today_date = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-print("Pobieram wiadomości i streszczenia do Twojej strony WWW...")
+print("downloading data")
 
-# --- 2. POBIERANIE DANYCH Z RSS ---
 for feed_url in rss_feeds:
     try:
         response = requests.get(feed_url, headers=headers, timeout=8)
@@ -38,19 +37,15 @@ for feed_url in rss_feeds:
                 link = entry.link
                 source_name = feed_url.split('/')[2].replace('www.', '')
                 
-                # Pobieramy oryginalne streszczenie z RSS
-                raw_summary = getattr(entry, 'summary', getattr(entry, 'description', 'Brak opisu.'))
+                raw_summary = getattr(entry, 'summary', getattr(entry, 'description', 'no description'))
                 
-                # Oczyszczamy tekst ze znaczków HTML (np. <p>, <a>)
                 clean_summary = re.sub('<[^<]+>', '', raw_summary)
                 
-                # Skracamy do max 150 znaków, by ładnie wyglądało, dodając "..."
                 if len(clean_summary) > 150:
                     short_summary = clean_summary[:150] + "..."
                 else:
                     short_summary = clean_summary
                 
-                # Dodaliśmy <p class="summary-text"> do naszej karty
                 articles_html += f"""
                 <article class="card">
                     <span class="tag">{source_name}</span>
@@ -63,7 +58,6 @@ for feed_url in rss_feeds:
     except Exception:
         pass
 
-# --- 3. SZABLON WIZUALNY (CSS + HTML) ---
 full_html_page = f"""
 <!DOCTYPE html>
 <html lang="pl">
@@ -132,13 +126,11 @@ full_html_page = f"""
             margin: 0 0 10px 0;
             color: #f1f5f9;
         }}
-        /* Nowy styl dla naszego streszczenia */
         .summary-text {{
             font-size: 14px;
             color: #94a3b8;
             line-height: 1.5;
             margin: 0 0 15px 0;
-            flex-grow: 1; /* Popycha link na sam dół karty */
         }}
         .read-more {{
             color: #38bdf8;
@@ -167,8 +159,7 @@ full_html_page = f"""
 </html>
 """
 
-# --- 4. ZAPISYWANIE PLIKU HTML ---
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(full_html_page)
 
-print("\n[SUKCES] Strona ze streszczeniami została wygenerowana!")
+print("\n[SUCCESS] Done!")
