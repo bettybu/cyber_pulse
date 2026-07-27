@@ -64,18 +64,16 @@ for feed_url in rss_feeds:
     except Exception:
         pass
 
-# Kafelek z naszą krówką w wersji profesjonalnej i po angielsku
 cow_card_html = """
 <article class="card cow-special-card">
     <span class="tag" style="background-color: #db2777;">Cyber Mascot</span>
-    <img src="cow_sidebar.jpg" alt="Ethical Hacking Cow" style="width: 100%; border-radius: 6px; margin: 10px 0;">
-    <h3>Cyber Cow Security</h3>
-    <p class="summary-text">Stay curious. An ethical hacker in pink glasses watches over network security and analyzes the latest threats.</p>
-    <a href="#" class="read-more" style="color: #f472b6;">Secure the future &rarr;</a>
+    <img src="cow_sidebar.jpg" alt="highland cow as aan ethical hacker image" style="width: 100%; border-radius: 6px; margin: 10px 0;">
+    <h3></h3>
+    <p class="summary-text">Daily cybersecurity news overview, updated every morning</p>
+    <a href="#" class="read-more" style="color: #f472b6;">Read more &rarr;</a>
 </article>
 """
 
-# Wstawiamy krówkę na 3. pozycję (prawy górny róg)
 if len(articles_list) >= 2:
     articles_list.insert(2, cow_card_html)
 else:
