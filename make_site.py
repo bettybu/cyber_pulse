@@ -67,7 +67,7 @@ for feed_url in rss_feeds:
 
 cow_card_html = """
 <article class="card cow-special-card">
-    <span class="tag" style="background-color: #db2777;">Cyber Mascot</span>
+    <span class="tag" style="background-color: #db2777;">Newest CVEs</span>
     <img src="cow_sidebar.jpg" alt="Ethical Hacking Cow" style="width: 100%; border-radius: 6px; margin: 10px 0;">
     <h3>Cyber Cow Security</h3>
     <p class="summary-text">Stay curious. Monitoring threat intelligence and tracking the latest vulnerabilities to secure the digital frontier.</p>
