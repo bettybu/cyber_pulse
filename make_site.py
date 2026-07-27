@@ -181,7 +181,7 @@ full_html_page = f"""
     <div class="container">
         <header>
             <h1>🛡️ OSINT & Cyber Daily Feed</h1>
-            <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM - your morning coffee with a Cyber Cow 🐂 | Last update: {today_date}</div>
+            <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM - your morning coffee with a Cyber Cow ☕ 🐂 | Last update: {today_date}</div>
         </header>
         
         <div class="grid">
