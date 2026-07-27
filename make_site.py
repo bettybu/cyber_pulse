@@ -66,6 +66,7 @@ full_html_page = f"""
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%%3E<circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ec4899%22/%3E</svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSINT & Cyber Threat Dashboard</title>
     <style>
