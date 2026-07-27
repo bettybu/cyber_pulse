@@ -62,18 +62,18 @@ for feed_url in rss_feeds:
     except Exception:
         pass
 
-# Kafelek z naszą krówką w różowych okularach
+# Kafelek z naszą krówką w wersji profesjonalnej i po angielsku
 cow_card_html = """
 <article class="card cow-special-card">
-    <span class="tag" style="background-color: #db2777;">Cyber Maskotka</span>
+    <span class="tag" style="background-color: #db2777;">Cyber Mascot</span>
     <img src="cow_sidebar.jpg" alt="Ethical Hacking Cow" style="width: 100%; border-radius: 6px; margin: 10px 0;">
     <h3>Cyber Cow Security</h3>
-    <p class="summary-text">Etyczna hakerka w różowych okularach czuwa nad bezpieczeństwem i analizuje zagrożenia.</p>
+    <p class="summary-text">Stay curious. An ethical hacker in pink glasses watches over network security and analyzes the latest threats.</p>
     <a href="#" class="read-more" style="color: #f472b6;">Secure the future &rarr;</a>
 </article>
 """
 
-# Wstawiamy krówkę dokładnie na 3. pozycję (indeks 2), czyli w prawy górny róg!
+# Wstawiamy krówkę na 3. pozycję (prawy górny róg)
 if len(articles_list) >= 2:
     articles_list.insert(2, cow_card_html)
 else:
@@ -83,7 +83,7 @@ articles_html = "".join(articles_list)
 
 full_html_page = f"""
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -176,7 +176,7 @@ full_html_page = f"""
     <div class="container">
         <header>
             <h1>🛡️ OSINT & Cyber Daily Feed</h1>
-            <div class="subtitle">Updated: {today_date}</div>
+            <div class="subtitle">Daily cybersecurity news overview, updated every morning | Last update: {today_date}</div>
         </header>
         
         <div class="grid">
