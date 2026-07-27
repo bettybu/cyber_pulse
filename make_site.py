@@ -13,7 +13,10 @@ rss_feeds = [
     "https://krebsonsecurity.com/feed/",
     "https://www.darkreading.com/rss.xml",
     "https://www.securityweek.com/feed/",
-    "https://www.cyberscoop.com/feed/"
+    "https://www.cyberscoop.com/feed/",
+    "https://zaufanatrzeciastrona.pl/feed/",
+    "https://cert.pl/feed/",
+    "https://sekurak.pl/feed/"
 ]
 
 headers = {
