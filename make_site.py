@@ -3,7 +3,6 @@ import requests
 import re
 from datetime import datetime
 
-
 rss_feeds = [
     "https://www.bellingcat.com/feed/",
     "https://forensicfocus.com/feed/",
@@ -22,14 +21,13 @@ rss_feeds = [
     "https://cert.pl/feed/",
     "https://sekurak.pl/feed/",
     "https://niebezpiecznik.pl/feed/"
-   
 ]
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-articles_list = []
+articles_data = []
 today_date = datetime.now().strftime("%Y-%m-%d %H:%M")
 
 print("downloading data")
@@ -39,15 +37,14 @@ for feed_url in rss_feeds:
         response = requests.get(feed_url, headers=headers, timeout=8)
         if response.status_code == 200:
             feed_data = feedparser.parse(response.content)
-            if len(feed_data.entries) > 0:
-                entry = feed_data.entries[0]
-                
+            
+            # Pobieramy maksymalnie 2 najnowsze wpisy z każdego źródła
+            for entry in feed_data.entries[:2]:
                 title = entry.title
                 link = entry.link
                 source_name = feed_url.split('/')[2].replace('www.', '')
                 
                 raw_summary = getattr(entry, 'summary', getattr(entry, 'description', 'no description'))
-                
                 clean_summary = re.sub('<[^<]+>', '', raw_summary)
                 
                 if len(clean_summary) > 150:
@@ -55,18 +52,41 @@ for feed_url in rss_feeds:
                 else:
                     short_summary = clean_summary
                 
-                card_html = f"""
-                <article class="card">
-                    <span class="tag">{source_name}</span>
-                    <h3>{title}</h3>
-                    <p class="summary-text">{short_summary}</p>
-                    <a href="{link}" target="_blank" class="read-more">Read more &rarr;</a>
-                </article>
-                """
-                articles_list.append(card_html)
+                # Pobieranie daty do sortowania (z obsługą wyjątków dla różnych formatów RSS)
+                if hasattr(entry, 'published_parsed') and entry.published_parsed:
+                    dt = datetime(*entry.published_parsed[:6])
+                elif hasattr(entry, 'updated_parsed') and entry.updated_parsed:
+                    dt = datetime(*entry.updated_parsed[:6])
+                else:
+                    dt = datetime.min # Najstarsza możliwa data jako bezpieczny fallback
+                
+                articles_data.append({
+                    'title': title,
+                    'link': link,
+                    'source_name': source_name,
+                    'summary': short_summary,
+                    'date': dt
+                })
                 print(f"[OK] {source_name}")
     except Exception:
         pass
+
+# Sortowanie wszystkich zebranych artykułów od najnowszych
+articles_data.sort(key=lambda x: x['date'], reverse=True)
+
+articles_list = []
+
+# Budowanie kodu HTML z posortowanych artykułów
+for article in articles_data:
+    card_html = f"""
+    <article class="card">
+        <span class="tag">{article['source_name']}</span>
+        <h3>{article['title']}</h3>
+        <p class="summary-text">{article['summary']}</p>
+        <a href="{article['link']}" target="_blank" class="read-more">Read more &rarr;</a>
+    </article>
+    """
+    articles_list.append(card_html)
 
 cow_card_html = """
 <article class="card cow-special-card">
