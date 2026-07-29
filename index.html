@@ -45,7 +45,7 @@
             display: flex;
             flex-direction: column;
             transition: transform 0.2s, border-color 0.2s;
-            position: relative; /* DODANE: Punkt odniesienia dla flagi */
+            position: relative;
         }
         .card:hover {
             transform: translateY(-3px);
@@ -56,7 +56,7 @@
             top: 15px;
             right: 15px;
             font-size: 24px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Delikatny cień pod flagą */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
         }
         .cow-special-card {
             border-color: #f472b6 !important;
@@ -73,12 +73,17 @@
             margin-bottom: 12px;
             text-transform: uppercase;
         }
+        .date-text {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
         h3 {
             font-size: 16px;
             line-height: 1.4;
             margin: 0 0 10px 0;
             color: #f1f5f9;
-            padding-right: 25px; /* DODANE: Zabezpiecza tekst przed najściem na flagę */
+            padding-right: 25px;
         }
         .summary-text {
             font-size: 14px;
@@ -102,14 +107,17 @@
     <div class="container">
         <header>
             <h1>🛡️ OSINT & Cyber Daily Feed</h1>
-                <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM - your morning coffee with a Cyber Cow ☕ 🐂<br>Last update: 2026-07-29 12:13</div>
+                <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM - your morning coffee with a Cyber Cow ☕ 🐂<br>Last update: 2026-07-29 12:32</div>
         </header>
         
         <div class="grid">
             
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">cert.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">cert.pl</span>
+            <span class="date-text">2026-07-29 10:55</span>
+        </div>
         <h3>Podatność w oprogramowaniu diff-so-fancy</h3>
         <p class="summary-text">W oprogramowaniu diff-so-fancy wykryto podatność typu Improper Encoding or Escaping of Output (CVE-2026-50642).</p>
         <a href="https://cert.pl/posts/2026/07/CVE-2026-50642/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -117,7 +125,10 @@
     
     <article class="card">
         
-        <span class="tag">securityweek.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">securityweek.com</span>
+            <span class="date-text">2026-07-29 10:10</span>
+        </div>
         <h3>OpenAI’s Rogue AI Ventured Beyond Hugging Face</h3>
         <p class="summary-text">Hugging Face has published an anatomy of the attack and OpenAI has shared additional information from its investigation.
 The post OpenAI&#8217;s Rogue...</p>
@@ -134,7 +145,10 @@ The post OpenAI&#8217;s Rogue...</p>
 
     <article class="card">
         
-        <span class="tag">cyberscoop.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">cyberscoop.com</span>
+            <span class="date-text">2026-07-29 10:00</span>
+        </div>
         <h3>OpenAI’s rogue AI agent shows why we need federal rules for autonomous systems</h3>
         <p class="summary-text">The Hugging Face breach shows there is a gap in federal policy. The frameworks to govern autonomous AI already exist—there just needs to be the desire...</p>
         <a href="https://cyberscoop.com/openai-rogue-agent-federal-rules-autonomous-ai/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -142,7 +156,10 @@ The post OpenAI&#8217;s Rogue...</p>
     
     <article class="card">
         
-        <span class="tag">securityweek.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">securityweek.com</span>
+            <span class="date-text">2026-07-29 09:12</span>
+        </div>
         <h3>Spur Raises $200 Million for IP Intelligence Platform</h3>
         <p class="summary-text">The IP intelligence company will use the fresh investment to accelerate and scale its operations.
 The post Spur Raises $200 Million for IP Intelligenc...</p>
@@ -151,7 +168,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">feeds.feedburner.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">feeds.feedburner.com</span>
+            <span class="date-text">2026-07-29 08:58</span>
+        </div>
         <h3>Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass</h3>
         <p class="summary-text">Cybersecurity researchers have shared additional technical details about a recently patched critical security flaw impacting Check Point Security Mana...</p>
         <a href="https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html" target="_blank" class="read-more">Read more &rarr;</a>
@@ -159,7 +179,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">cert.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">cert.pl</span>
+            <span class="date-text">2026-07-29 08:55</span>
+        </div>
         <h3>Podatności w oprogramowaniu GNU Bison</h3>
         <p class="summary-text">W oprogramowaniu GNU Bison wykryto 2 podatności różnego typu (CVE-2026-56389 oraz CVE-2026-56390)</p>
         <a href="https://cert.pl/posts/2026/07/CVE-2026-56389/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -167,7 +190,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">feeds.feedburner.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">feeds.feedburner.com</span>
+            <span class="date-text">2026-07-29 07:51</span>
+        </div>
         <h3>OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach</h3>
         <p class="summary-text">OpenAI on Tuesday revealed the rogue artificial intelligence (AI) agent that escaped its sealed evaluation environment and broke into Hugging Face's p...</p>
         <a href="https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html" target="_blank" class="read-more">Read more &rarr;</a>
@@ -175,7 +201,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">therecord.media</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">therecord.media</span>
+            <span class="date-text">2026-07-28 23:18</span>
+        </div>
         <h3>Senate confirms Clayton as intel chief after delays</h3>
         <p class="summary-text">A party-line vote in the Senate installed Jay Clayton as director of national intelligence, a job that has drawn increasing scrutiny during Donald Tru...</p>
         <a href="https://therecord.media/jay-clayton-confirmed-dni-senate" target="_blank" class="read-more">Read more &rarr;</a>
@@ -183,7 +212,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">darkreading.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">darkreading.com</span>
+            <span class="date-text">2026-07-28 21:33</span>
+        </div>
         <h3>Ghost Credentials Expose Cloud Systems to Hidden Identity Risks</h3>
         <p class="summary-text">Dormant nonhuman identities can create security blind spots, says security researcher Aleksandr Krasnov, who has released an open source tool to sniff...</p>
         <a href="https://www.darkreading.com/cloud-security/non-human-identity-sprawl-creates-a-new-cloud-attack-path" target="_blank" class="read-more">Read more &rarr;</a>
@@ -191,7 +223,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">darkreading.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">darkreading.com</span>
+            <span class="date-text">2026-07-28 21:07</span>
+        </div>
         <h3>Thousands of Data Center Controllers Open to Takeover</h3>
         <p class="summary-text">A host of Internet-exposed remote hardware management processors are subject to offline password-cracking attacks — and adversaries have taken note.</p>
         <a href="https://www.darkreading.com/cyber-risk/flaw-exposes-data-centers-server-takeover" target="_blank" class="read-more">Read more &rarr;</a>
@@ -199,7 +234,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">cyberscoop.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">cyberscoop.com</span>
+            <span class="date-text">2026-07-28 20:54</span>
+        </div>
         <h3>Here’s what Anthropic found when it turned Mythos loose on encryption algorithms</h3>
         <p class="summary-text">Claude Mythos exposed mathematical weaknesses in a post-quantum candidate and a simplified version of AES, marking a major breakthrough for AI-driven ...</p>
         <a href="https://cyberscoop.com/anthropic-claude-mythos-encryption-flaws-hawk-aes-pqc/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -207,7 +245,10 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     
     <article class="card">
         
-        <span class="tag">citizenlab.ca</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">citizenlab.ca</span>
+            <span class="date-text">2026-07-28 18:02</span>
+        </div>
         <h3>Co-Founder of Controversial Spyware Firm Had Israeli Diplomatic Passport</h3>
         <p class="summary-text">The OCCRP found that the co-founder of NSO Group, which develops Pegasus spyware, travelled to Panama in 2013 on an Israeli diplomatic passport.
 The p...</p>
@@ -216,7 +257,10 @@ The p...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">sekurak.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">sekurak.pl</span>
+            <span class="date-text">2026-07-28 15:48</span>
+        </div>
         <h3>Gość zainfekował pytanie egzaminacyjne ukrytą instrukcją dla AI…</h3>
         <p class="summary-text">Dzisiejszym bohaterem dr. Jason Gibson, profesor historii na Alcorn State University (USA). Ale przejdźmy od razu do rzeczy. Gdzieś w środku normalneg...</p>
         <a href="https://sekurak.pl/gosc-zainfekowal-pytanie-egzaminacyjne-ukryta-instrukcja-dla-ai/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -224,7 +268,10 @@ The p...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">sekurak.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">sekurak.pl</span>
+            <span class="date-text">2026-07-28 15:45</span>
+        </div>
         <h3>Wydał ~100 zł na subskrypcję GPT 5.6 (Sol). Ten znalazł mu exploita wartego ~2000000zł</h3>
         <p class="summary-text">Szczerze mówiąc nie wierzyłem, że takie rzeczy się mogą wydarzyć. Badacz, który niedawno zgłosił krytyczną podatność w WordPress Core, opracował całoś...</p>
         <a href="https://sekurak.pl/wydal-100-zl-na-subskrypcje-gpt-5-6-sol-ten-znalazl-mu-exploita-wartego-2000000zl/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -232,7 +279,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">therecord.media</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">therecord.media</span>
+            <span class="date-text">2026-07-28 14:45</span>
+        </div>
         <h3>India’s Bank of Baroda confirms cyber incident after hackers claim data theft</h3>
         <p class="summary-text">An employee's email account had been compromised, allowing unauthorized access to "certain data," Bank of Baroda reported.</p>
         <a href="https://therecord.media/india-bank-of-baroda-reports-cybersecurity-incident" target="_blank" class="read-more">Read more &rarr;</a>
@@ -240,7 +290,10 @@ The p...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">niebezpiecznik.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">niebezpiecznik.pl</span>
+            <span class="date-text">2026-07-27 08:12</span>
+        </div>
         <h3>Został zatrzymany do kontroli i podał hasło, które skasowało zawartość smartfona zamiast go odblokować. Teraz może trafić do więzienia&#8230;</h3>
         <p class="summary-text">Ciekawa sprawa z USA. Tamtejsza prokuratura oskarżyła Samuela Tunicka o podanie funkcjonariuszom granicznym hasła, które zamiast odblokować smartfona ...</p>
         <a href="https://niebezpiecznik.pl/post/zostal-zatrzymany-do-kontroli-i-podal-haslo-ktore-skasowalo-zawartosc-smartfona-zamiast-go-odblokowac-teraz-moze-trafic-do-wiezienia-problemy/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -248,7 +301,10 @@ The p...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">zaufanatrzeciastrona.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">zaufanatrzeciastrona.pl</span>
+            <span class="date-text">2026-07-26 12:53</span>
+        </div>
         <h3>Weekendowa Lektura: odcinek 686 [2026-07-26]. Bierzcie i czytajcie</h3>
         <p class="summary-text">Zapraszamy do nowego wydania Weekendowej Lektury. Jest już wprawdzie niedziela, ale przy odrobinie determinacji zdążycie przejrzeć wszystkie linki, kt...</p>
         <a href="https://beta.zaufanatrzeciastrona.pl/post/weekendowa-lektura-odcinek-686-2026-07-26-bierzcie-i-czytajcie/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -256,7 +312,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">bellingcat.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">bellingcat.com</span>
+            <span class="date-text">2026-07-24 15:39</span>
+        </div>
         <h3>Shahed-Type Drones Filmed During Mali Village Attacks</h3>
         <p class="summary-text">Bellingcat has geolocated footage showing Shahed-136 type kamikaze drones in operation in Mali. Defence Blog and France 24 previously published report...</p>
         <a href="https://www.bellingcat.com/news/2026/07/24/shahed-type-drones-filmed-during-attack-on-mali-villages/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -264,7 +323,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">citizenlab.ca</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">citizenlab.ca</span>
+            <span class="date-text">2026-07-24 14:48</span>
+        </div>
         <h3>How Iran Uses Cellular Infrastructure to Target US Military Phones</h3>
         <p class="summary-text">Senior fellow Gary Miller spoke with Cape Cellular about the exploitation of mobile network vulnerabilities to track US personnel during the Iran war....</p>
         <a href="https://citizenlab.ca/how-iran-uses-cellular-infrastructure-to-target-us-military-phones/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -272,7 +334,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">krebsonsecurity.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">krebsonsecurity.com</span>
+            <span class="date-text">2026-07-22 01:10</span>
+        </div>
         <h3>LG to Ban Residential Proxies from Smart TV Apps</h3>
         <p class="summary-text">The home appliance giant LG Electronics USA said this week it plans to suspend any apps built for its smart TVs that turn one's television into an alw...</p>
         <a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -280,7 +345,10 @@ The p...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">zaufanatrzeciastrona.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">zaufanatrzeciastrona.pl</span>
+            <span class="date-text">2026-07-18 00:56</span>
+        </div>
         <h3>Weekendowa Lektura: odcinek 685 [2026-07-18]. Bierzcie i czytajcie</h3>
         <p class="summary-text">Zapraszamy do nowego wydania Weekendowej Lektury. Przestępcy ani myślą o urlopie, dlatego poniżej przeczytacie to, co udało się nam znaleźć i wyselekc...</p>
         <a href="https://beta.zaufanatrzeciastrona.pl/post/weekendowa-lektura-odcinek-685-2026-07-18-bierzcie-i-czytajcie/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -288,7 +356,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">bellingcat.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">bellingcat.com</span>
+            <span class="date-text">2026-07-16 16:00</span>
+        </div>
         <h3>Identifying the Crypto Entrepreneur Linked to Popular Forum Trading in ‘Leaked’ Nudes of Women</h3>
         <p class="summary-text">This investigation is a collaboration between Bellingcat and New Zealand news site The Press. You can read The Press’ piece here.&#160; Content warnin...</p>
         <a href="https://www.bellingcat.com/news/2026/07/16/leakedbb-crypto-entrepreneur/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -296,7 +367,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">krebsonsecurity.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">krebsonsecurity.com</span>
+            <span class="date-text">2026-07-14 19:22</span>
+        </div>
         <h3>Microsoft Patches a Record 570 Security Flaws</h3>
         <p class="summary-text">Microsoft Corp. today released software updates to plug at least 570 security holes in its Windows operating systems and other software, almost triple...</p>
         <a href="https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -304,7 +378,10 @@ The p...</p>
     
     <article class="card">
         <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
-        <span class="tag">niebezpiecznik.pl</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">niebezpiecznik.pl</span>
+            <span class="date-text">2026-07-13 13:45</span>
+        </div>
         <h3>Jak (nie) założyć w chmurze cyfrowego cmentarza dla cyberprzestępców</h3>
         <p class="summary-text">&#8220;Wystaw to na chwilę, sprawdzimy czy działa, potem się wyłączy&#8221; &#8212; coś takiego powiedziało wielu deweloperów. Problem w tym, że &#822...</p>
         <a href="https://niebezpiecznik.pl/post/jak-nie-zalozyc-w-chmurze-cyfrowego-cmentarza-dla-cyberprzestepcow/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -312,7 +389,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">thedfirreport.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">thedfirreport.com</span>
+            <span class="date-text">2026-06-29 13:07</span>
+        </div>
         <h3>From Bing Search to Ransomware: Bumblebee and AdaptixC2 Deliver Akira</h3>
         <p class="summary-text">Key Takeaways This case was first reported to customers in a threat brief released in July 2025 and in a public flash alert in August 2025 in partners...</p>
         <a href="https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/" target="_blank" class="read-more">Read more &rarr;</a>
@@ -320,7 +400,10 @@ The p...</p>
     
     <article class="card">
         
-        <span class="tag">thedfirreport.com</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">thedfirreport.com</span>
+            <span class="date-text">2026-05-11 14:05</span>
+        </div>
         <h3>Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware</h3>
         <p class="summary-text">The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-5...</p>
         <a href="https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/" target="_blank" class="read-more">Read more &rarr;</a>
