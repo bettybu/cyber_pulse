@@ -37,7 +37,6 @@ for feed_url in rss_feeds:
         if response.status_code == 200:
             feed_data = feedparser.parse(response.content)
             
-            # Pobieramy maksymalnie 2 najnowsze wpisy z każdego źródła
             for entry in feed_data.entries[:2]:
                 title = entry.title
                 link = entry.link
@@ -74,15 +73,22 @@ articles_data.sort(key=lambda x: x['date'], reverse=True)
 
 articles_list = []
 
-# Budowanie kodu HTML z posortowanych artykułów
 for article in articles_data:
-    # SPRAWDZENIE: Jeśli źródło kończy się na .pl, dodaj flagę
     flag_html = '<span class="pl-flag" title="Polskie źródło">🇵🇱</span>' if article['source_name'].endswith('.pl') else ''
+    
+    # Formatowanie daty do wyświetlenia na kafelku
+    if article['date'] == datetime.min:
+        date_str = ""
+    else:
+        date_str = article['date'].strftime("%Y-%m-%d %H:%M")
     
     card_html = f"""
     <article class="card">
         {flag_html}
-        <span class="tag">{article['source_name']}</span>
+        <div style="display: flex; justify-content: flex-start; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span class="tag" style="margin-bottom: 0;">{article['source_name']}</span>
+            <span class="date-text">{date_str}</span>
+        </div>
         <h3>{article['title']}</h3>
         <p class="summary-text">{article['summary']}</p>
         <a href="{article['link']}" target="_blank" class="read-more">Read more &rarr;</a>
@@ -154,7 +160,7 @@ full_html_page = f"""
             display: flex;
             flex-direction: column;
             transition: transform 0.2s, border-color 0.2s;
-            position: relative; /* DODANE: Punkt odniesienia dla flagi */
+            position: relative;
         }}
         .card:hover {{
             transform: translateY(-3px);
@@ -165,7 +171,7 @@ full_html_page = f"""
             top: 15px;
             right: 15px;
             font-size: 24px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Delikatny cień pod flagą */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
         }}
         .cow-special-card {{
             border-color: #f472b6 !important;
@@ -182,12 +188,17 @@ full_html_page = f"""
             margin-bottom: 12px;
             text-transform: uppercase;
         }}
+        .date-text {{
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
+        }}
         h3 {{
             font-size: 16px;
             line-height: 1.4;
             margin: 0 0 10px 0;
             color: #f1f5f9;
-            padding-right: 25px; /* DODANE: Zabezpiecza tekst przed najściem na flagę */
+            padding-right: 25px;
         }}
         .summary-text {{
             font-size: 14px;
