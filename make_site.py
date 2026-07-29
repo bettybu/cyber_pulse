@@ -52,13 +52,12 @@ for feed_url in rss_feeds:
                 else:
                     short_summary = clean_summary
                 
-                # Pobieranie daty do sortowania (z obsługą wyjątków dla różnych formatów RSS)
                 if hasattr(entry, 'published_parsed') and entry.published_parsed:
                     dt = datetime(*entry.published_parsed[:6])
                 elif hasattr(entry, 'updated_parsed') and entry.updated_parsed:
                     dt = datetime(*entry.updated_parsed[:6])
                 else:
-                    dt = datetime.min # Najstarsza możliwa data jako bezpieczny fallback
+                    dt = datetime.min 
                 
                 articles_data.append({
                     'title': title,
@@ -78,8 +77,12 @@ articles_list = []
 
 # Budowanie kodu HTML z posortowanych artykułów
 for article in articles_data:
+    # SPRAWDZENIE: Jeśli źródło kończy się na .pl, dodaj flagę
+    flag_html = '<span class="pl-flag" title="Polskie źródło">🇵🇱</span>' if article['source_name'].endswith('.pl') else ''
+    
     card_html = f"""
     <article class="card">
+        {flag_html}
         <span class="tag">{article['source_name']}</span>
         <h3>{article['title']}</h3>
         <p class="summary-text">{article['summary']}</p>
@@ -152,10 +155,18 @@ full_html_page = f"""
             display: flex;
             flex-direction: column;
             transition: transform 0.2s, border-color 0.2s;
+            position: relative; /* DODANE: Punkt odniesienia dla flagi */
         }}
         .card:hover {{
             transform: translateY(-3px);
             border-color: #38bdf8;
+        }}
+        .pl-flag {{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Delikatny cień pod flagą */
         }}
         .cow-special-card {{
             border-color: #f472b6 !important;
@@ -177,6 +188,7 @@ full_html_page = f"""
             line-height: 1.4;
             margin: 0 0 10px 0;
             color: #f1f5f9;
+            padding-right: 25px; /* DODANE: Zabezpiecza tekst przed najściem na flagę */
         }}
         .summary-text {{
             font-size: 14px;
