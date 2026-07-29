@@ -45,10 +45,18 @@
             display: flex;
             flex-direction: column;
             transition: transform 0.2s, border-color 0.2s;
+            position: relative; /* DODANE: Punkt odniesienia dla flagi */
         }
         .card:hover {
             transform: translateY(-3px);
             border-color: #38bdf8;
+        }
+        .pl-flag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Delikatny cień pod flagą */
         }
         .cow-special-card {
             border-color: #f472b6 !important;
@@ -70,6 +78,7 @@
             line-height: 1.4;
             margin: 0 0 10px 0;
             color: #f1f5f9;
+            padding-right: 25px; /* DODANE: Zabezpiecza tekst przed najściem na flagę */
         }
         .summary-text {
             font-size: 14px;
@@ -93,12 +102,13 @@
     <div class="container">
         <header>
             <h1>🛡️ OSINT & Cyber Daily Feed</h1>
-                <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM - your morning coffee with a Cyber Cow ☕ 🐂<br>Last update: 2026-07-29 11:57</div>
+                <div class="subtitle">Daily cybersecurity news overview, updated every day at 8:00 AM - your morning coffee with a Cyber Cow ☕ 🐂<br>Last update: 2026-07-29 12:01</div>
         </header>
         
         <div class="grid">
             
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">cert.pl</span>
         <h3>Podatność w oprogramowaniu diff-so-fancy</h3>
         <p class="summary-text">W oprogramowaniu diff-so-fancy wykryto podatność typu Improper Encoding or Escaping of Output (CVE-2026-50642).</p>
@@ -106,6 +116,7 @@
     </article>
     
     <article class="card">
+        
         <span class="tag">securityweek.com</span>
         <h3>Spur Raises $200 Million for IP Intelligence Platform</h3>
         <p class="summary-text">The IP intelligence company will use the fresh investment to accelerate and scale its operations.
@@ -122,6 +133,7 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
 </article>
 
     <article class="card">
+        
         <span class="tag">feeds.feedburner.com</span>
         <h3>Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass</h3>
         <p class="summary-text">Cybersecurity researchers have shared additional technical details about a recently patched critical security flaw impacting Check Point Security Mana...</p>
@@ -129,6 +141,7 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">cert.pl</span>
         <h3>Podatności w oprogramowaniu GNU Bison</h3>
         <p class="summary-text">W oprogramowaniu GNU Bison wykryto 2 podatności różnego typu (CVE-2026-56389 oraz CVE-2026-56390)</p>
@@ -136,6 +149,7 @@ The post Spur Raises $200 Million for IP Intelligenc...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">securityweek.com</span>
         <h3>JFrog Zero-Days Exploited in OpenAI-Hugging Face Hack</h3>
         <p class="summary-text">The OpenAI models targeted services beyond Hugging Face as they attempted to solve the tasks they were given.
@@ -144,6 +158,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">feeds.feedburner.com</span>
         <h3>OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach</h3>
         <p class="summary-text">OpenAI on Tuesday revealed the rogue artificial intelligence (AI) agent that escaped its sealed evaluation environment and broke into Hugging Face's p...</p>
@@ -151,6 +166,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">therecord.media</span>
         <h3>Senate confirms Clayton as intel chief after delays</h3>
         <p class="summary-text">A party-line vote in the Senate installed Jay Clayton as director of national intelligence, a job that has drawn increasing scrutiny during Donald Tru...</p>
@@ -158,6 +174,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">darkreading.com</span>
         <h3>Ghost Credentials Expose Cloud Systems to Hidden Identity Risks</h3>
         <p class="summary-text">Dormant nonhuman identities can create security blind spots, says security researcher Aleksandr Krasnov, who has released an open source tool to sniff...</p>
@@ -165,6 +182,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">darkreading.com</span>
         <h3>Thousands of Data Center Controllers Open to Takeover</h3>
         <p class="summary-text">A host of Internet-exposed remote hardware management processors are subject to offline password-cracking attacks — and adversaries have taken note.</p>
@@ -172,6 +190,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">cyberscoop.com</span>
         <h3>Here’s what Anthropic found when it turned Mythos loose on encryption algorithms</h3>
         <p class="summary-text">Claude Mythos exposed mathematical weaknesses in a post-quantum candidate and a simplified version of AES, marking a major breakthrough for AI-driven ...</p>
@@ -179,6 +198,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">cyberscoop.com</span>
         <h3>Coordinated cyberattack disrupts water utilities in 30+ Minnesota communities</h3>
         <p class="summary-text">A cyberattack of undetermined origin disrupted water treatment plants in at least 30 communities in Minnesota, according to the state's technology bur...</p>
@@ -186,6 +206,7 @@ The post JFrog Zero-Days Exploited in Op...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">citizenlab.ca</span>
         <h3>Co-Founder of Controversial Spyware Firm Had Israeli Diplomatic Passport</h3>
         <p class="summary-text">The OCCRP found that the co-founder of NSO Group, which develops Pegasus spyware, travelled to Panama in 2013 on an Israeli diplomatic passport.
@@ -194,6 +215,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">sekurak.pl</span>
         <h3>Gość zainfekował pytanie egzaminacyjne ukrytą instrukcją dla AI…</h3>
         <p class="summary-text">Dzisiejszym bohaterem dr. Jason Gibson, profesor historii na Alcorn State University (USA). Ale przejdźmy od razu do rzeczy. Gdzieś w środku normalneg...</p>
@@ -201,6 +223,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">sekurak.pl</span>
         <h3>Wydał ~100 zł na subskrypcję GPT 5.6 (Sol). Ten znalazł mu exploita wartego ~2000000zł</h3>
         <p class="summary-text">Szczerze mówiąc nie wierzyłem, że takie rzeczy się mogą wydarzyć. Badacz, który niedawno zgłosił krytyczną podatność w WordPress Core, opracował całoś...</p>
@@ -208,6 +231,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">therecord.media</span>
         <h3>India’s Bank of Baroda confirms cyber incident after hackers claim data theft</h3>
         <p class="summary-text">An employee's email account had been compromised, allowing unauthorized access to "certain data," Bank of Baroda reported.</p>
@@ -215,6 +239,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">niebezpiecznik.pl</span>
         <h3>Został zatrzymany do kontroli i podał hasło, które skasowało zawartość smartfona zamiast go odblokować. Teraz może trafić do więzienia&#8230;</h3>
         <p class="summary-text">Ciekawa sprawa z USA. Tamtejsza prokuratura oskarżyła Samuela Tunicka o podanie funkcjonariuszom granicznym hasła, które zamiast odblokować smartfona ...</p>
@@ -222,6 +247,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">zaufanatrzeciastrona.pl</span>
         <h3>Weekendowa Lektura: odcinek 686 [2026-07-26]. Bierzcie i czytajcie</h3>
         <p class="summary-text">Zapraszamy do nowego wydania Weekendowej Lektury. Jest już wprawdzie niedziela, ale przy odrobinie determinacji zdążycie przejrzeć wszystkie linki, kt...</p>
@@ -229,6 +255,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">bellingcat.com</span>
         <h3>Shahed-Type Drones Filmed During Mali Village Attacks</h3>
         <p class="summary-text">Bellingcat has geolocated footage showing Shahed-136 type kamikaze drones in operation in Mali. Defence Blog and France 24 previously published report...</p>
@@ -236,6 +263,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">citizenlab.ca</span>
         <h3>How Iran Uses Cellular Infrastructure to Target US Military Phones</h3>
         <p class="summary-text">Senior fellow Gary Miller spoke with Cape Cellular about the exploitation of mobile network vulnerabilities to track US personnel during the Iran war....</p>
@@ -243,6 +271,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">krebsonsecurity.com</span>
         <h3>LG to Ban Residential Proxies from Smart TV Apps</h3>
         <p class="summary-text">The home appliance giant LG Electronics USA said this week it plans to suspend any apps built for its smart TVs that turn one's television into an alw...</p>
@@ -250,6 +279,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">zaufanatrzeciastrona.pl</span>
         <h3>Weekendowa Lektura: odcinek 685 [2026-07-18]. Bierzcie i czytajcie</h3>
         <p class="summary-text">Zapraszamy do nowego wydania Weekendowej Lektury. Przestępcy ani myślą o urlopie, dlatego poniżej przeczytacie to, co udało się nam znaleźć i wyselekc...</p>
@@ -257,6 +287,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">bellingcat.com</span>
         <h3>Identifying the Crypto Entrepreneur Linked to Popular Forum Trading in ‘Leaked’ Nudes of Women</h3>
         <p class="summary-text">This investigation is a collaboration between Bellingcat and New Zealand news site The Press. You can read The Press’ piece here.&#160; Content warnin...</p>
@@ -264,6 +295,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">krebsonsecurity.com</span>
         <h3>Microsoft Patches a Record 570 Security Flaws</h3>
         <p class="summary-text">Microsoft Corp. today released software updates to plug at least 570 security holes in its Windows operating systems and other software, almost triple...</p>
@@ -271,6 +303,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">inteltechniques.com</span>
         <h3>Online Training: Updates & Membership Discounts</h3>
         <p class="summary-text">Posted By: Jason Edison Periodically, we like to share some of the tactics, tools, and topics that we’ve been tackling recently in our online training...</p>
@@ -278,6 +311,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        <span class="pl-flag" title="Polskie źródło">🇵🇱</span>
         <span class="tag">niebezpiecznik.pl</span>
         <h3>Jak (nie) założyć w chmurze cyfrowego cmentarza dla cyberprzestępców</h3>
         <p class="summary-text">&#8220;Wystaw to na chwilę, sprawdzimy czy działa, potem się wyłączy&#8221; &#8212; coś takiego powiedziało wielu deweloperów. Problem w tym, że &#822...</p>
@@ -285,6 +319,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">thedfirreport.com</span>
         <h3>From Bing Search to Ransomware: Bumblebee and AdaptixC2 Deliver Akira</h3>
         <p class="summary-text">Key Takeaways This case was first reported to customers in a threat brief released in July 2025 and in a public flash alert in August 2025 in partners...</p>
@@ -292,6 +327,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">inteltechniques.com</span>
         <h3>UNREDACTED Magazine 012</h3>
         <p class="summary-text">Issue #012 is now available (18 Articles - 66 Pages) by the IntelTechniques team for $10! https://unredactedmagazine.com https://payhip.com/b/fS2NA Co...</p>
@@ -299,6 +335,7 @@ The p...</p>
     </article>
     
     <article class="card">
+        
         <span class="tag">thedfirreport.com</span>
         <h3>Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware</h3>
         <p class="summary-text">The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-5...</p>
