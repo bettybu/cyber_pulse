@@ -68,7 +68,6 @@ for feed_url in rss_feeds:
     except Exception:
         pass
 
-# Sortowanie wszystkich zebranych artykułów od najnowszych
 articles_data.sort(key=lambda x: x['date'], reverse=True)
 
 articles_list = []
@@ -76,7 +75,6 @@ articles_list = []
 for article in articles_data:
     flag_html = '<span class="pl-flag" title="Polskie źródło">🇵🇱</span>' if article['source_name'].endswith('.pl') else ''
     
-    # Formatowanie daty do wyświetlenia na kafelku
     if article['date'] == datetime.min:
         date_str = ""
     else:
